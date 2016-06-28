@@ -19,11 +19,11 @@
 		-->
 	</head>
 	<body>
-		<div class="hskcolor" style="z-index: 99; position: absolute; bottom: 0; width: 100%; height: 20%;">
+		<div class="hskcolor" id="barShadowTop" style="z-index: 99; position: absolute; bottom: 0; width: 100%; height: 20%;">
 			<img style="float: left; position: relative; margin: .8%; width: 9%" src="assets/gamerlogo.png" />
 			<img style="float: right; position: relative; margin: 2.5%; width: 30%" src="assets/hsk.png" />
 		</div>
-		<div class="hskcolor" style="z-index: 99; position: absolute; top: 0; width: 100%; height: 5%;">
+		<div class="hskcolor" id="barShadowBot" style="z-index: 99; position: absolute; top: 0; width: 100%; height: 5%;">
 		</div>
 		<div class="reveal">
 			<div class="slides">
@@ -31,10 +31,10 @@
 					<img class="noBorder upMargin" style="width: 100%" src="assets/logo_final.png" />
 				</section>
 				<section>
-					<iframe class="upMargin" src="threejs/index.html" scrolling="no" style="border:none; width: 550px; height: 500px; overflow: hidden"></iframe>
+					<iframe id="iFrame" class="upMargin" src="threejs/index.html" scrolling="no" style="border:none; width: 550px; height: 500px; overflow: hidden"></iframe>
 				</section>
 				<section>
-					<h1>Fight</h1>
+					<img class="noBorder" style="margin-top: -5.35% !important; width: 150%" src="assets/fight.png" />
 				</section>
 				<section>
 					<h1>Augmented Reality</h1>
@@ -43,7 +43,7 @@
 					<h1>Aufgabe</h1>
 				</section>
 				<section>
-					<img style="margin-top: -5.35% !important" src="assets/sample.png" />
+					<img class="noBorder" style="margin-top: -5.35% !important; width: 63%" src="assets/samplezoomed.png" />
 				</section>
 				<section>
 					<img class="noBorder" style="margin-top: -5.35%; width: 80%;" src="assets/aufbau.png" />
@@ -53,7 +53,7 @@
 					<img class="noBorder" style="margin-top: -5.35%; padding: 5%; width: 20%;" src="assets/vision.png" />
 				</section>
 				<section>
-					<h1>2D &#8594; <span id="dreiD">3D</span></h1>
+					<h1 style="font-size: 200px !important">2D &#8594; <span id="dreiD">3D</span></h1>
 				</section>
 				<section>
 					<img class="noBorder" style="margin-top: -5.35%; width: 68%;" src="assets/markers.jpg" />
@@ -65,7 +65,7 @@
 					</div>
 				</section>
 				<section>
-					Roboter*
+					<img style="margin-top: -5.35% !important" src="assets/sample.png" />
 				</section>
 				<section>
 					<h1>ZUKUNFT</h1>
@@ -82,6 +82,7 @@
 			});
 		</script>
 		<script>
+		document.getElementById('iFrame').addEventListener("contextmenu", function() {return false});
 		document.addEventListener("mousedown", handleClick, false);
 		document.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);
 		function handleClick(e) {
