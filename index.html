@@ -4,10 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>AR-Robots</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+		<link rel="stylesheet" href="css/main.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -22,10 +23,67 @@
 		</script>
 	</head>
 	<body>
+		<div class="hskcolor" style="z-index: 99; position: absolute; bottom: 0; width: 100%; height: 20%;">
+			<img style="float: left; position: relative; margin: .8%; width: 9%" src="assets/gamerlogo.png" />
+			<img style="float: right; position: relative; margin: 2.5%; width: 30%" src="assets/hsk.png" />
+		</div>
+		<div class="hskcolor" style="z-index: 99; position: absolute; top: 0; width: 100%; height: 5%;">
+		</div>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section>
+					<img class="noBorder upMargin" style="width: 100%" src="assets/logo_final.png" />
+				</section>
+				<section>
+					<iframe class="upMargin" src="threejs/index.html" scrolling="no" style="border:none; width: 550px; height: 500px; overflow: hidden"></iframe>
+				</section>
+				<section>
+					<h1>Fight</h1>
+				</section>
+				<section>
+					<h1>Augmented Reality</h1>
+				</section>
+				<section>
+					<h1>Aufgabe</h1>
+				</section>
+				<section>
+					<img style="margin-top: -5.35% !important" src="assets/sample.png" />
+				</section>
+				<section>
+					<img class="noBorder" style="margin-top: -5.35%; width: 80%;" src="assets/aufbau.png" />
+				</section>
+				<section>
+					<h1>Computer Vision</h1>
+					<img class="noBorder" style="margin-top: -5.35%; padding: 5%; width: 20%;" src="assets/vision.png" />
+
+				</section>
+				<section>
+					<h1>2D &#8594; <span id="dreiD">3D</span></h1>
+				</section>
+				<section>
+					<img class="noBorder" style="margin-top: -5.35%; width: 68%;" src="assets/markers.jpg" />
+				</section>
+				<section>
+					<div style="position:relative; width: 100%; height: 600px; margin:0 auto;">
+					<img class="fragment fade-out noBorder" data-fragment-index="0" src="assets/homographie.png" style="position:absolute;top:0;left:0;opacity:1 !important" />
+					<img class="fragment slide-in noBorder" data-fragment-index="0" src="assets/homographie2.png" style="position:absolute;top:0;left:0;opacity:1 !important" />
+					</div>
+				</section>
+				<section>
+					Roboter*
+				</section>
+				<section>
+					<h1>ZUKUNFT</h1>
+				</section>
+				<section>
+
+				</section>
+				<section>
+
+				</section>
+				<section>
+
+				</section>
 			</div>
 		</div>
 
@@ -36,6 +94,7 @@
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
 				history: true,
+				controls: false,
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
@@ -46,5 +105,17 @@
 				]
 			});
 		</script>
+		<!--
+		<script>
+		window.addEventListener("mousedown", handleClick, false);
+		window.addEventListener("contextmenu", function(e) { e.preventDefault(); }, false);
+
+		function handleClick(e) {
+			e.preventDefault();
+			if(e.button === 0) Reveal.next();
+			if(e.button === 2) Reveal.prev();
+		}
+		</script>
+	-->
 	</body>
 </html>
