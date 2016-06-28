@@ -43,33 +43,11 @@ function initMesh() {
     });
 }
 
-/*
-var mesh = null;
-function initMesh() {
-  var loader = new THREE.JSONLoader();
-  loader.load( 'assets/robot.json', function ( geometry ) {
-  mesh = new THREE.Mesh( geometry, new THREE.MeshBasicMaterial() );
-  mesh.position.set(0, 0, 0);
-  mesh.scale.x = mesh.scale.y = mesh.scale.z = 0.75;
-  scene.add(mesh);
-  });
-}
-
-
-*/
-
-
 function rotateMesh() {
     if (!mesh) {
         return;
     }
-    mesh.rotation.y -= SPEED * 3;
-
-/*
-    mesh.rotation.x -= SPEED * 2;
-    mesh.rotation.y -= SPEED;
-    mesh.rotation.z -= SPEED * 3;
-*/
+    mesh.rotation.y -= SPEED * 2;
 }
 
 function render() {
